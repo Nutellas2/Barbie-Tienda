@@ -28,7 +28,11 @@ header {
 }
 .producto img {
   width: 100%;
+  max-width: 180px;        /* achica la imagen */
   height: auto;
+  border: 4px solid #c71585; /* borde rosa oscuro */
+  border-radius: 10px;       /* bordes redondeados */
+  margin-bottom: 0.5rem;
 }
 .contacto {
   padding: 2rem;
