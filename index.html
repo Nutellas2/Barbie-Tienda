@@ -1,52 +1,105 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html> <!-- Indica el tipo de documento HTML -->
+<html lang="es"> <!-- El idioma principal del contenido es español -->
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tienda Barbie</title>
-  <link rel="stylesheet" href="estilos.css" />
+  <meta charset="UTF-8"> <!-- Establece la codificación de caracteres como UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que el sitio sea responsive -->
+  <title>Proyecto Flexbox Responsive</title> <!-- Título que se muestra en la pestaña del navegador -->
+  <link rel="stylesheet" href="style.css"> <!-- Vincula la hoja de estilos externa -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Fuente Roboto desde Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!--Iconos de redes sociales-->
+
 </head>
+
 <body>
+  <!-- Encabezado principal del sitio -->
   <header>
-    <h1>Mundo Barbie</h1>
-    <p>Descubrí las muñecas más lindas</p>
+    <h1>Muñecas de Mattel</h1> <!-- Título del sitio web -->
+    <nav> <!-- Navegación principal -->
+      <ul>
+        <li><a href="#inicio">Inicio</a></li> <!-- Enlace a la sección de inicio -->
+        <li><a href="#productos">Productos</a></li> <!-- Enlace a la sección de productos -->
+        <li><a href="#contacto">Contacto</a></li> <!-- Enlace a la sección de contacto -->
+      </ul>
+    </nav>
   </header>
 
-  <section class="productos">
-    <div class="producto">
-      <img src="https://f.fcdn.app/imgs/4c6f12/elreydelentretenimiento.com/erdeuy/9c50/webp/catalogo/89449710_barbie_1/1500-1500/muneca-barbie-clasica-fashion-original-varios-modelos-barbie.jpg" alt="Barbie clásica">
-      <h3>Barbie Clásica</h3>
-      <p>La Barbie de siempre, con un look renovado.</p>
-      <span>$30.000</span>
-    </div>
-    <div class="producto">
-      <img src="https://barbiepedia.com/img/barbie/800/G6279_0.jpg" alt="Barbie Princesa">
-      <h3>Barbie Princesa</h3>
-      <p>Incluye vestido rosa brillante y corona.</p>
-      <span>$45.000</span>
-    </div>
-  </section>
+  <!-- Contenido principal del sitio -->
+  <main>
+    <!-- Sección de bienvenida -->
+    <section id="inicio">
+      <h2>Barbie</h2> <!-- Título de la sección -->
+      <img src="https://pmlib.org/wp-content/uploads/2023/08/barbie-01.png" alt="Imagen bienvenida"> <!-- Imagen decorativa -->
+      <p>Descubrí nuestros encantadores productos exclusivos.</p> <!-- Texto introductorio -->
+    </section>
 
-  <section class="contacto">
-    <h2>¡Seguinos y contactanos!</h2>
-    <div class="redes">
-      <a href="https://www.instagram.com/barbie/" target="_blank">Instagram</a>
-      <a href="https://www.facebook.com/OficialBarbieLATAM/" target="_blank">Facebook</a>
-    </div>
+    <!-- Sección de productos -->
+    <section id="productos">
+      <h2>Productos</h2> <!-- Título de la sección -->
+      <div class="productos-container"> <!-- Contenedor de los productos -->
+        <div class="producto"> <!-- Primer producto -->
+            <p>Barbie Clasica</p> <!-- Descripción del producto -->
+          <img src="https://f.fcdn.app/imgs/4c6f12/elreydelentretenimiento.com/erdeuy/9c50/webp/catalogo/89449710_barbie_1/1500-1500/muneca-barbie-clasica-fashion-original-varios-modelos-barbie.jpg" alt="Barbie Clasica"> <!-- Imagen del producto -->
+          
+        </div>
+        <div class="producto"> <!-- Segundo producto -->
+            <p>Barbie Princesa</p>
+          <img src="https://i.etsystatic.com/20697782/r/il/ee96c4/4833280591/il_1588xN.4833280591_q3ye.jpg" alt="Barbie Princesa">
+          
+        </div>
+        <div class="producto"> <!-- Tercer producto -->
+            <p>Barbie Patinadora</p>
+          <img src="https://http2.mlstatic.com/D_NQ_NP_2X_696080-MLA76533429916_052024-F.webp" alt="Barbie Patinadora">
+          
+        </div>
+      </div>
+    </section>
 
-    <form class="formulario-contacto" action="https://formsubmit.co/tu_email@gmail.com" method="POST">
-      <h3>Escribinos un mensaje</h3>
-      <input type="text" name="nombre" placeholder="Tu nombre" required />
-      <input type="email" name="email" placeholder="Tu email" required />
-      <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
-      <button type="submit">Enviar</button>
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://micaelacabreraa.github.io/Barbie-Tienda/gracias.html">
-    </form>
-  </section>
+    <!-- Sección de contacto -->
+    <section id="contacto">
+      <h2>Contacto</h2> <!-- Título de la sección -->
+      <form action="#" method="POST"> <!-- Formulario de contacto -->
+        <label for="nombre">Nombre:</label> <!-- Etiqueta para el nombre -->
+        <input type="text" id="nombre" name="nombre" required> <!-- Campo de texto obligatorio -->
 
+        <label for="correo">Correo electrónico:</label> <!-- Etiqueta para correo -->
+        <input type="email" id="correo" name="correo" required> <!-- Campo de email obligatorio -->
+
+        <label for="mensaje">Mensaje:</label> <!-- Etiqueta para el mensaje -->
+        <textarea id="mensaje" name="mensaje" required></textarea> <!-- Área de texto obligatorio -->
+
+        <button type="submit">Enviar</button> <!-- Botón de envío -->
+      </form>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+
+  <!-- Redes Sociales-->
   <footer>
-    <p>&copy; 2025 Mundo Barbie. Todos los derechos reservados.</p>
+    <ul>
+      <li>
+        <a href="https://www.facebook.com/OficialBarbieLATAM/" target="_blank">
+          <i class="fab fa-facebook"></i> Facebook
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/barbie/" target="_blank">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+      </li>
+      <li>
+        <a href="https://x.com/barbie?lang=es" target="_blank">
+          <i class="fab fa-twitter"></i> X-Twitter
+        </a>
+      </li>
+    </ul>
+  </footer>
+  
+<!-- Fin del sitio web-->
+  <footer>
+    <p>&copy; 2025 Anahí Micaela Cabrera </p> <!-- Derechos de autor -->
   </footer>
 </body>
+
 </html>
