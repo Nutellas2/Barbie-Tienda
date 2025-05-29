@@ -111,10 +111,11 @@ body {
     box-shadow: 0 0 10px #ffc0cb;
   }
   
-  label {
+  form label {
     display: block;
+    text-align: center;
     margin-top: 10px;
-    color: #333;
+    font-weight: bold;
   }
   
   input, textarea {
