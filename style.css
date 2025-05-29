@@ -112,11 +112,12 @@ body {
   }
   
   form label {
-    display: block;
-    text-align: center;
-    margin-top: 10px;
-    font-weight: bold;
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
   }
+
   
   input, textarea {
     width: 100%;
@@ -186,4 +187,3 @@ body {
     color: #555;
     margin-top: 40px;
   }
-  
