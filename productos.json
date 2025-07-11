@@ -1,0 +1,69 @@
+[
+  {
+    "id": 1,
+    "nombre": "Barbie Multicolor",
+    "precio": 6500,
+    "imagen": "https://tribilinbb.com.ar/wp-content/uploads/2023/07/BARBIE-FASHIONISTA-190.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "Barbie Princesa",
+    "precio": 6800,
+    "imagen": "https://acdn-us.mitiendanube.com/stores/001/910/805/products/640403f204789a0c3e5ce781f38d32d8cd159ccae033e89adac10ac6f4356319804951-034d1d8f9eb796ecf716910885582382-1024-1024.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Barbie Sirena",
+    "precio": 6000,
+    "imagen": "https://acdn-us.mitiendanube.com/stores/001/240/940/products/img_3448-1e1d8299aa0b8cc0e917219474323029-480-0.jpeg"
+  },
+  {
+    "id": 4,
+    "nombre": "Barbie Glitz",
+    "precio": 7200,
+    "imagen": "https://mundojuguete.vtexassets.com/arquivos/ids/206120/3171203-3.png?v=638590931731570000"
+  },
+
+  {
+    "id": 5,
+    "nombre": "Barbie Bailarina",
+    "precio": 7000,
+    "imagen": "https://www.jugueteriascaty.com.ar/wp-content/uploads/2024/05/32384.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "Barbie Fashionista",
+    "precio": 7500,
+    "imagen": "https://tribilinbb.com.ar/wp-content/uploads/2023/07/BARBIE-FASHIONISTA-197.jpg"
+  },
+  {
+    "id": 7,
+    "nombre": "Barbie Unicornio",
+    "precio": 7100,
+    "imagen": "https://mundojuguete.vtexassets.com/arquivos/ids/202903-800-800?v=638551846689470000&width=800&height=800&aspect=true"
+  },
+  {
+    "id": 8,
+    "nombre": "Barbie Disco",
+    "precio": 6900,
+    "imagen": "https://kinderlandar.vtexassets.com/arquivos/ids/193314/imagen---2024-08-13T201725.214.jpg?v=638591878749900000"
+  },
+  {
+    "id": 9,
+    "nombre": "Barbie Basica",
+    "precio": 5200,
+    "imagen": "https://tiotomar.vtexassets.com/arquivos/ids/191322-800-800?v=638054085922400000&width=800&height=800&aspect=true"
+  },
+  {
+    "id": 10,
+    "nombre": "Barbie Colorida",
+    "precio": 7200,
+    "imagen": "https://tribilinbb.com.ar/wp-content/uploads/2023/07/BARBIE-FASHIONISTA-197.jpg"
+  },
+  {
+    "id": 11,
+    "nombre": "Barbie Rosa",
+    "precio": 6400,
+    "imagen": "https://barbiepedia.com/img/barbie/800/GRB59_0.jpg"
+  }
+]

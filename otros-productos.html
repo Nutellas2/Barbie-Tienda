@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Otros Productos - Muñecas de Mattel</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <h1>Otros Productos</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html#inicio">Inicio</a></li>
+        <li><a href="index.html#productos">Productos</a></li>
+        <li><a href="index.html#regalos">Regalos</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+        <li><a href="otros-productos.html">Otros Productos</a></li>
+      </ul>
+    </nav>
+    <div class="carrito-icono" onclick="mostrarCarrito()" tabindex="0" role="button" aria-label="Abrir carrito">
+      <i class="fas fa-shopping-cart"></i>
+      <span id="contador-carrito">0</span>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Productos importados desde DummyJSON</h2>
+      <div id="contenedor-dummy" class="productos-container" aria-live="polite"></div>
+    </section>
+
+    <section id="carrito" class="carrito" aria-label="Carrito de compras">
+      <button class="cerrar-carrito" onclick="mostrarCarrito()" aria-label="Cerrar carrito">&times;</button>
+      <h2>Carrito de Compras</h2>
+      <ul id="lista-carrito" aria-live="polite"></ul>
+      <p id="total">Total: $0</p>
+      <button class="finalizar-compra" onclick="finalizarCompra()">Finalizar Compra</button>
+    </section>
+
+    <!-- Mensaje flotante de éxito -->
+    <div id="mensaje-agregado" style="display: none; position: fixed; top: 20px; right: 20px; background-color: #ff69b4; color: white; padding: 12px 20px; border-radius: 10px; font-weight: bold; box-shadow: 0 0 10px deeppink; z-index: 1002;">
+      Producto agregado al carrito 💖
+    </div>
+  </main>
+
+  <footer>
+    <ul>
+      <li><a href="https://www.facebook.com/OficialBarbieLATAM/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+      <li><a href="https://www.instagram.com/barbie/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+      <li><a href="https://x.com/barbie?lang=es" target="_blank"><i class="fab fa-twitter"></i> X-Twitter</a></li>
+    </ul>
+    <p>&copy; 2025 Anahí Micaela Cabrera</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Carga dinámica desde dummyjson.com y guarda productos en sessionStorage para el carrito
+    fetch('https://dummyjson.com/products?limit=6')
+      .then(response => response.json())
+      .then(data => {
+        const contenedor = document.getElementById("contenedor-dummy");
+
+        // Guardar productos en sessionStorage con clave "productos"
+        sessionStorage.setItem("productos", JSON.stringify(data.products));
+
+        data.products.forEach(producto => {
+          const div = document.createElement("div");
+          div.classList.add("producto");
+
+          div.innerHTML = `
+            <img src="${producto.thumbnail}" alt="${producto.title}" class="imagen-producto">
+            <p>${producto.title}</p>
+            <span>$${producto.price}</span>
+            <button onclick="agregarAlCarrito(${producto.id})">Agregar al carrito</button>
+          `;
+          contenedor.appendChild(div);
+        });
+      })
+      .catch(error => {
+        const contenedor = document.getElementById("contenedor-dummy");
+        contenedor.innerHTML = "<p>No se pudieron cargar los productos. Intentá más tarde.</p>";
+        console.error("Error al cargar productos desde DummyJSON:", error);
+      });
+  </script>
+</body>
+</html>
