@@ -1,117 +1,171 @@
-<!DOCTYPE html> <!-- Indica el tipo de documento HTML -->
-<html lang="es"> <!-- El idioma principal del contenido es español -->
-
+<!DOCTYPE html> 
+<html lang="es">
 <head>
-  <meta charset="UTF-8"> <!-- Establece la codificación de caracteres como UTF-8 -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que el sitio sea responsive -->
-  <title>Proyecto Flexbox Responsive</title> <!-- Título que se muestra en la pestaña del navegador -->
-  <link rel="stylesheet" href="style.css"> <!-- Vincula la hoja de estilos externa -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Fuente Roboto desde Google Fonts -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!--Iconos de redes sociales-->
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tienda online de muñecas Barbie de Mattel. Descubrí las mejores muñecas, accesorios y ofertas." />
+  <meta name="keywords" content="barbie, muñecas, juguetes, mattel, tienda, princesas, casa barbie" />
+  <meta name="author" content="Anahí Micaela Cabrera" />
+  <title>Muñecas de Mattel</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <!-- Encabezado principal del sitio -->
+  <!-- Encabezado principal -->
   <header>
-    <h1>Muñecas de Mattel</h1> <!-- Título del sitio web -->
-    <nav> <!-- Navegación principal -->
+    <h1>Muñecas de Mattel</h1>
+    <nav>
       <ul>
-        <li><a href="#inicio">Inicio</a></li> <!-- Enlace a la sección de inicio -->
-        <li><a href="#productos">Productos</a></li> <!-- Enlace a la sección de productos -->
-        <li><a href="#contacto">Contacto</a></li> <!-- Enlace a la sección de contacto -->
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#regalos">Regalos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="otros-productos.html">Otros Productos</a></li>
       </ul>
     </nav>
+    <div class="carrito-icono" onclick="mostrarCarrito()" tabindex="0" role="button" aria-label="Abrir carrito">
+      <i class="fas fa-shopping-cart"></i>
+      <span id="contador-carrito">0</span>
+    </div>
   </header>
 
-  <!-- Contenido principal del sitio -->
   <main>
-    <!-- Sección de bienvenida -->
     <section id="inicio">
-      <h2>Barbie</h2> <!-- Título de la sección -->
-      <img src="https://pmlib.org/wp-content/uploads/2023/08/barbie-01.png" alt="Imagen bienvenida"> <!-- Imagen decorativa -->
-      <p>Descubrí nuestros encantadores productos exclusivos.</p> <!-- Texto introductorio -->
-    </section>
-
-    <!-- Sección de productos -->
-    <section id="productos">
-      <h2>Productos</h2> <!-- Título de la sección -->
-      <div class="productos-container"> <!-- Contenedor de los productos -->
-        <div class="producto"> <!-- Primer producto -->
-            <p>Barbie Clasica</p> <!-- Descripción del producto -->
-          <img src="https://f.fcdn.app/imgs/4c6f12/elreydelentretenimiento.com/erdeuy/9c50/webp/catalogo/89449710_barbie_1/1500-1500/muneca-barbie-clasica-fashion-original-varios-modelos-barbie.jpg" alt="Barbie Clasica"> <!-- Imagen del producto -->
-          
-        </div>
-        <div class="producto"> <!-- Segundo producto -->
-            <p>Barbie Cantante</p>
-          <img src="https://dcdn-us.mitiendanube.com/stores/001/168/246/products/barbi-profesiones-jpg31-e136ecb037dae1add516897142183708-1024-1024.jpg">
-          
-        </div>
-        <div class="producto"> <!-- Tercer producto -->
-            <p>Barbie Princesa</p>
-          <img src="https://http2.mlstatic.com/D_NQ_NP_2X_856554-MLA42559167227_072020-F.webp" alt="Barbie Princesa">
-        </div>
-        <div class="producto"> <!-- Cuarto producto -->
-            <p>Barbie Patinadora</p>
-          <img src="https://http2.mlstatic.com/D_NQ_NP_2X_696080-MLA76533429916_052024-F.webp" alt="Barbie Patinadora">
-          
-        </div>
+      <h2>Barbie</h2>
+      <img src="https://pmlib.org/wp-content/uploads/2023/08/barbie-01.png" alt="Barbie bienvenida" />
+      <div class="descripcion-barbie">
+        <p>✨ Bienvenidos al mágico universo de Barbie ✨</p>
+        <p>Donde cada muñeca representa un sueño, una historia y un mundo por descubrir.</p>
+        <p>Con su estilo único, colores vibrantes y detalles encantadores, Barbie invita a imaginar sin límites.</p>
+        <p>Ya sea princesa, científica, artista o heroína, cada Barbie inspira a crear, jugar y soñar en grande.</p>
+        <p>💖 ¡Dejá que tu colección crezca con magia, fantasía y mucha diversión! 💖</p>
       </div>
-    </section>
 
-    <section class="video-barbie">
-  <h2 style="font-style: normal;">¡Nueva Barbie DreamHouse para tu colección de muñecas!</h2>
-  <div style="text-align: center;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/sY3xOhvZVaU" title="Barbie DreamHouse" frameborder="0" allowfullscreen></iframe>
-  </div>
-  </section>
+      <section id="accesos-rapidos">
+        <div class="caja-link productos" onclick="location.href='#productos'">
+          <img src="imagenes/productos.png" alt="Ir a productos" />
+          <div class="texto-caja">Productos</div>
+        </div>
+        <div class="caja-link regalos" onclick="location.href='#regalos'">
+          <img src="imagenes/regalos.png" alt="Ir a regalos" />
+          <div class="texto-caja">Regalos</div>
+        </div>
+        <div class="caja-link Otros-productos" onclick="location.href='otros-productos.html'" tabindex="0" role="button" aria-label="Ir a Otros Productos">
+          <img src="imagenes/otros-productos.png" alt="Ir a Otros Productos" />
+          <div class="texto-caja">Otros Productos</div>
+        </div>
+        <div class="caja-link contacto" onclick="location.href='#contacto'">
+          <img src="imagenes/contacto.png" alt="Ir a contacto" />
+          <div class="texto-caja">Contacto</div>
+        </div>
+      </section>
 
+      <section id="productos">
+        <h2>Productos</h2>
+        <div id="contenedor-productos" class="productos-container" aria-live="polite">
+          <!-- Productos se cargan dinámicamente desde script.js -->
+        </div>
+      </section>
 
-    <!-- Sección de contacto -->
-    <section id="contacto">
-      <h2>Contacto</h2> <!-- Título de la sección -->
-      <form action="#" method="POST"> <!-- Formulario de contacto -->
-        <label for="nombre">Nombre:</label> <!-- Etiqueta para el nombre -->
-        <input type="text" id="nombre" name="nombre" required> <!-- Campo de texto obligatorio -->
+      <section id="regalos">
+        <h2>Regalos</h2>
+        <div class="productos-container">
+          <div class="producto">
+            <img src="https://wallpapercat.com/w/full/7/e/e/298564-3840x2160-desktop-4k-barbie-doll-wallpaper.jpg" alt="Wallpaper Barbie" class="imagen-producto">
+            <p>Kit Wallpaper Barbie</p>
+            <button>Ver más</button>
+          </div>
+          <div class="producto">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyB_DkRQsrZaNNREutIay6pBsfv6GDmCtNJlOypxQA-Nl6jUM6DCBACBofZfOgvhrjsBQ&usqp=CAU" alt="Emojis Barbie" class="imagen-producto">
+            <p>Emojis Barbie</p>
+            <button>Ver más</button>
+          </div>
+          <div class="producto">
+            <img src="https://i.etsystatic.com/26638174/r/il/da4472/4140015643/il_fullxfull.4140015643_tbfp.jpg" alt="Iconos Barbie" class="imagen-producto">
+            <p>Iconos Barbie</p>
+            <button>Ver más</button>
+          </div>
+        </div>
+      </section>
 
-        <label for="correo">Correo electrónico:</label> <!-- Etiqueta para correo -->
-        <input type="email" id="correo" name="correo" required> <!-- Campo de email obligatorio -->
+      <section id="carrito" class="carrito" aria-label="Carrito de compras">
+        <h2>Carrito de Compras</h2>
+        <ul id="lista-carrito" aria-live="polite"></ul>
+        <p id="total">Total: $0</p>
+        <button class="finalizar-compra" onclick="finalizarCompra()">Finalizar Compra</button>
+      </section>
 
-        <label for="mensaje">Mensaje:</label> <!-- Etiqueta para el mensaje -->
-        <textarea id="mensaje" name="mensaje" required></textarea> <!-- Área de texto obligatorio -->
+      <section class="video-barbie">
+        <h2>¡Nueva Barbie DreamHouse para tu colección de muñecas!</h2>
+        <div style="text-align: center;">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/sY3xOhvZVaU" title="Barbie DreamHouse" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </section>
 
-        <button type="submit">Enviar</button> <!-- Botón de envío -->
-      </form>
+      <section id="reseñas">
+        <h2>Reseñas</h2>
+        <div class="reseñas-grid">
+          <div class="reseña">
+            <p>"¡Hermosa la Barbie Princesa!"</p>
+            <div class="estrellas">★★★★★</div>
+            <span>- Camila</span>
+          </div>
+          <div class="reseña">
+            <p>"Mi hija está feliz con su nueva muñeca."</p>
+            <div class="estrellas">★★★★★</div>
+            <span>- Florencia</span>
+          </div>
+          <div class="reseña">
+            <p>"Envío rápido y excelente atención."</p>
+            <div class="estrellas">★★★★★</div>
+            <span>- Laura</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto">
+        <h2>Contacto</h2>
+        <form id="form-contacto" action="https://formspree.io/f/your-form-id" method="POST">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required />
+          <label for="correo">Correo electrónico:</label>
+          <input type="email" id="correo" name="correo" required />
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+        <p id="error-form" style="display:none; color: red; margin-top: 10px;"></p>
+        <div id="mensaje-confirmacion" style="display: none; text-align: center; color: deeppink; font-weight: bold; margin-top: 10px;">
+          ¡Gracias por tu mensaje! Te responderemos pronto 💌
+        </div>
+      </section>
     </section>
   </main>
 
-  <!-- Pie de página -->
-
-  <!-- Redes Sociales-->
   <footer>
     <ul>
-      <li>
-        <a href="https://www.facebook.com/OficialBarbieLATAM/" target="_blank">
-          <i class="fab fa-facebook"></i> Facebook
-        </a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com/barbie/" target="_blank">
-          <i class="fab fa-instagram"></i> Instagram
-        </a>
-      </li>
-      <li>
-        <a href="https://x.com/barbie?lang=es" target="_blank">
-          <i class="fab fa-twitter"></i> X-Twitter
-        </a>
-      </li>
+      <li><a href="https://www.facebook.com/OficialBarbieLATAM/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+      <li><a href="https://www.instagram.com/barbie/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+      <li><a href="https://x.com/barbie?lang=es" target="_blank"><i class="fab fa-twitter"></i> X-Twitter</a></li>
     </ul>
+    <p>&copy; 2025 Anahí Micaela Cabrera</p>
   </footer>
-  
-<!-- Fin del sitio web-->
-  <footer>
-    <p>&copy; 2025 Anahí Micaela Cabrera </p> <!-- Derechos de autor -->
-  </footer>
-</body>
 
+  <script src="script.js"></script>
+  <script>
+    const formulario = document.getElementById("form-contacto");
+    const mensaje = document.getElementById("mensaje-confirmacion");
+
+    formulario.addEventListener("submit", function (e) {
+      e.preventDefault();
+      mensaje.style.display = "block";
+      formulario.reset();
+      setTimeout(() => {
+        mensaje.style.display = "none";
+      }, 5000);
+    });
+  </script>
+</body>
 </html>
