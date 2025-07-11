@@ -1,189 +1,481 @@
-/* Estilo general */
+/* ========== ESTILOS GENERALES ========== */
+/* Estilos base para toda la página */
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fff0f5; /* fondo rosado suave */
-    color: #333;
-  }
-  
-  /* Título principal con estilo Barbie */
-  header h1 {
-    font-family: "Brush Script MT", cursive;
-    color: hotpink;
-    font-size: 3rem;
-    text-align: center;
-    text-shadow: 2px 2px 5px #ff69b4;
-    margin: 20px 0;
-  }
-  /* Texto Barbie agrandar*/
-  #inicio h2 {
-    font-family: "Brush Script MT", cursive;  /* estilo Barbie */
-    color: deeppink;
-    font-size: 5rem;        /* agranda el texto */
-    margin-top: 5px;        /* reduce espacio arriba */
-    margin-bottom: 5px;     /* reduce espacio abajo */
-    text-align: center;
-  }
-  
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff0f5; /* Fondo rosa claro */
+  color: #333; /* Color de texto principal */
+}
 
-  /* Estilo para achicar el banner debajo del título "Barbie" */
+/* Estilo para el texto descriptivo de Barbie */
+.descripcion-barbie {
+  font-family: 'Dancing Script', cursive; /* Fuente decorativa */
+  font-size: 1.3rem;
+  color: deeppink; /* Rosa intenso */
+  max-width: 600px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+/* ========== ENCABEZADO ========== */
+/* Título principal de la página */
+header h1 {
+  font-family: "Brush Script MT", cursive; /* Fuente manuscrita */
+  color: hotpink; /* Rosa brillante */
+  font-size: 3rem; /* Tamaño grande */
+  text-align: center;
+  text-shadow: 2px 2px 5px #ff69b4; /* Sombra rosa */
+  margin: 20px 0;
+}
+
+/* ========== ICONO DEL CARRITO ========== */
+/* Estilo del botón del carrito (flotante) */
+.carrito-icono {
+  position: fixed; /* Posición fija */
+  top: 20px;
+  right: 20px;
+  background-color: #ff69b4; /* Rosa */
+  padding: 10px 15px;
+  border-radius: 30px; /* Forma ovalada */
+  box-shadow: 0 0 10px #ffb6c1; /* Sombra suave */
+  cursor: pointer; /* Cambia el cursor */
+  color: white; /* Texto blanco */
+  z-index: 1001; /* Capa superior */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Efecto al pasar el mouse sobre el carrito */
+.carrito-icono:hover {
+  background-color: deeppink; /* Rosa más oscuro */
+}
+
+/* Icono dentro del botón del carrito */
+.carrito-icono i {
+  font-size: 1.2rem; /* Tamaño del icono */
+}
+
+/* ========== SECCIÓN DE INICIO ========== */
+/* Título "Barbie" en la sección principal */
+#inicio h2 {
+  font-family: "Brush Script MT", cursive;
+  color: deeppink;
+  font-size: 5rem; /* Tamaño extra grande */
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+/* Contenedor de la sección de inicio */
 #inicio {
   text-align: center;
   padding: 20px;
 }
 
+/* Imagen principal de bienvenida */
 #inicio img {
-  width: 1200px;        /* Achica el ancho de la imagen */
-  max-width: 100%;     /* Que no se pase en pantallas chicas */
-  height: auto;        /* Mantiene proporciones correctas */
+  width: 1200px;
+  max-width: 100%; /* Responsive */
+  height: auto;
   margin-top: 10px;
   margin-bottom: 10px;
-  border-radius: 15px; /* Bordes redondeados (opcional) */
-  box-shadow: 0 0 10px #ffb6c1; /* Sombrita rosa decorativa (opcional) */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 0 10px #ffb6c1; /* Sombra rosa */
 }
-  
-  /* Título de secciones */
-  h2 {
-    font-family: "Brush Script MT", cursive;
-    color: deeppink;
-    text-align: center;
-    font-size: 2.5rem;
-    margin-top: 40px;
-  }
-  
-  /* Navegación */
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    background-color: #ffe4e1;
-    margin: 0;
-  }
-  
-  nav ul li {
-    margin: 0 15px;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: hotpink;
-    font-weight: bold;
-  }
-  
-  /* Productos */
-  .productos-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    padding: 20px;
-  }
-  
-  .producto {
-    text-align: center;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 15px;
-    box-shadow: 0 0 10px #ffb6c1;
-    width: 250px;
-  }
-  
-  .producto img {
-    width: 100%;
-    border-radius: 10px;
-  }
-  
-  .producto p {
-    font-family: "Brush Script MT", cursive;
-    font-size: 1.5rem;
-    color: hotpink;
-  }
-  
-  /* Formulario */
-  form {
-    max-width: 500px;
-    margin: auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 0 10px #ffc0cb;
-  }
-  
-  form label {
+
+/* ========== TÍTULOS SECUNDARIOS ========== */
+/* Estilo para todos los títulos h2 */
+h2 {
+  font-family: "Brush Script MT", cursive;
+  color: deeppink;
+  text-align: center;
+  font-size: 2.5rem; /* Tamaño mediano */
+  margin-top: 40px;
+}
+
+/* ========== BARRA DE NAVEGACIÓN ========== */
+/* Lista de navegación principal */
+nav ul {
+  list-style: none; /* Sin viñetas */
+  display: flex; /* Disposición en línea */
+  justify-content: center; /* Centrado */
+  padding: 0;
+  background-color: #ffe4e1; /* Fondo rosa claro */
+  margin: 0;
+}
+
+/* Elementos del menú de navegación */
+nav ul li {
+  margin: 0 15px; /* Espaciado entre items */
+}
+
+/* Enlaces del menú */
+nav ul li a {
+  text-decoration: none; /* Sin subrayado */
+  color: hotpink; /* Rosa */
+  font-weight: bold;
+}
+
+/* ========== SECCIÓN DE PRODUCTOS ========== */
+/* Contenedor principal de productos */
+.productos-container {
+  display: flex; /* Disposición flexible */
+  justify-content: center; /* Centrado */
+  gap: 15px; /* Espacio entre productos */
+  flex-wrap: wrap; /* Ajuste en pantallas pequeñas */
+  padding: 20px;
+}
+
+/* Tarjeta individual de producto */
+.producto {
+  text-align: center;
+  background-color: #fff; /* Fondo blanco */
+  padding: 8px;
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 0 10px #ffb6c1; /* Sombra rosa */
+  width: 400px; /* Ancho fijo */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+  min-height: 360px; /* Altura mínima */
+  box-sizing: border-box; /* Modelo de caja */
+}
+
+/* Imágenes dentro de las tarjetas de producto */
+.producto img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px; /* Bordes redondeados */
+  object-fit: cover; /* Ajuste de imagen */
+  object-position: center;
+  background-color: #fff0f5; /* Fondo rosa claro */
+  flex-shrink: 0; /* Evita que se encoja */
+}
+
+/* Nombre del producto */
+.producto p {
+  font-family: "Brush Script MT", cursive;
+  font-size: 2.2rem; /* Tamaño grande */
+  color: hotpink;
+  min-height: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4px;
+}
+
+/* Botón dentro de la tarjeta de producto */
+.producto button {
+  margin-top: auto; /* Lo posiciona al final */
+  align-self: center; /* Centrado horizontal */
+}
+
+/* Clase reutilizable para imágenes de producto */
+.imagen-producto {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  background-color: white; /* Fondo blanco */
+}
+
+/* ========== FORMULARIO ========== */
+/* Estilo base del formulario */
+form {
+  max-width: 500px;
+  width: 90%;
+  margin: 0 auto; /* Centrado horizontal */
+  background-color: #fff; /* Fondo blanco */
+  padding: 20px;
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 0 10px #ffc0cb; /* Sombra rosa */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Etiquetas del formulario */
+form label {
   display: block;
   text-align: center;
   margin-top: 10px;
   font-weight: bold;
-  }
+}
 
-  
-  input, textarea {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-  }
-  
-  button {
-    margin-top: 15px;
-    background-color: hotpink;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  
-  button:hover {
-    background-color: deeppink;
-  }
-  
-  /* Footer */
-/*Redes sociales*/
-  footer {
-    background-color: #fce4ec;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  footer ul li {
-    display: inline-block;
-    margin: 0 15px;
-  }
-  
-  footer ul li a {
-    color: deeppink;
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: bold;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    transition: color 0.3s ease;
-  }
-  
-  footer ul li a:hover {
-    color: #c71585;
-  }
-  
-  footer ul li a i {
-    font-size: 1.3rem;
-  }
-/*  "mi sitio web derechos reservados*/
-  footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #ffe4e1;
-    color: #555;
-    margin-top: 40px;
-  }
+/* Campos de entrada */
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 8px; /* Bordes redondeados */
+  border: 1px solid #ccc; /* Borde gris */
+}
+
+/* Botones generales */
+button {
+  margin-top: 15px;
+  background-color: hotpink; /* Rosa */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px; /* Bordes redondeados */
+  cursor: pointer; /* Mano al pasar */
+  font-weight: bold;
+}
+
+/* Efecto hover para botones */
+button:hover {
+  background-color: deeppink; /* Rosa oscuro */
+}
+
+/* ========== PIE DE PÁGINA ========== */
+footer {
+  background-color: #fce4ec; /* Fondo rosa claro */
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+  color: #555; /* Texto gris */
+}
+
+/* Lista de redes sociales */
+footer ul {
+  list-style: none; /* Sin viñetas */
+  padding: 0;
+  margin: 0;
+}
+
+/* Elementos de redes sociales */
+footer ul li {
+  display: inline-block; /* En línea */
+  margin: 0 15px; /* Espaciado */
+}
+
+/* Enlaces de redes sociales */
+footer ul li a {
+  color: deeppink; /* Rosa intenso */
+  text-decoration: none; /* Sin subrayado */
+  font-size: 1.1rem;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* Espacio entre icono y texto */
+  transition: color 0.3s ease; /* Transición suave */
+}
+
+/* Efecto hover en enlaces */
+footer ul li a:hover {
+  color: #c71585; /* Rosa oscuro */
+}
+
+/* Iconos dentro de enlaces */
+footer ul li a i {
+  font-size: 1.3rem; /* Tamaño del icono */
+}
+
+/* ========== SECCIÓN DE RESEÑAS ========== */
+/* Contenedor grid para reseñas */
+.reseñas-grid {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap; /* Responsive */
+  padding: 10px 0;
+}
+
+/* Tarjeta individual de reseña */
+.reseña {
+  background-color: #ffe4e1; /* Fondo rosa claro */
+  padding: 10px;
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 0 5px #ffb6c1; /* Sombra rosa */
+  font-size: 0.95rem; /* Tamaño de texto */
+  width: 180px; /* Ancho fijo */
+  text-align: center;
+  flex-shrink: 0; /* Evita que se encoja */
+}
+
+/* Texto dentro de reseñas */
+.reseña p, .reseña span {
+  margin: 6px 0; /* Espaciado vertical */
+}
+
+/* Estilo de estrellas de valoración */
+.estrellas {
+  color: deeppink; /* Rosa */
+  font-size: 1.5rem; /* Tamaño grande */
+  margin-top: 8px;
+}
+
+/* ========== CARRITO LATERAL ========== */
+/* Panel del carrito (oculto por defecto) */
+.carrito {
+  position: fixed; /* Posición fija */
+  top: 0;
+  right: 0;
+  width: 300px; /* Ancho fijo */
+  height: 100%;
+  background-color: #fff0f5; /* Fondo rosa claro */
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2); /* Sombra izquierda */
+  padding: 20px;
+  overflow-y: auto; /* Scroll vertical */
+  z-index: 1000; /* Capa inferior al icono */
+  transition: transform 0.3s ease-in-out; /* Animación suave */
+  transform: translateX(100%); /* Fuera de pantalla */
+}
+
+/* Estado visible del carrito */
+.carrito.visible {
+  transform: translateX(0); /* Visible */
+}
+
+/* Botones dentro del carrito */
+.carrito button {
+  background-color: #ff69b4; /* Rosa */
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 8px; /* Bordes redondeados */
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+/* Efecto hover para botones del carrito */
+.carrito button:hover {
+  background-color: deeppink; /* Rosa oscuro */
+}
+
+/* Botón para cerrar el carrito */
+.carrito .cerrar-carrito {
+  position: absolute; /* Posición absoluta */
+  top: 10px;
+  right: 10px;
+  background-color: transparent; /* Sin fondo */
+  border: none;
+  font-size: 1.5rem; /* Tamaño grande */
+  color: deeppink; /* Rosa */
+  cursor: pointer;
+}
+
+/* Efecto hover para botón cerrar */
+.carrito .cerrar-carrito:hover {
+  color: hotpink; /* Rosa claro */
+}
+
+/* Lista de productos en el carrito */
+#lista-carrito {
+  list-style-type: disc; /* Viñetas */
+  padding-left: 20px;
+}
+
+/* Items del carrito */
+#lista-carrito li {
+  margin-bottom: 10px;
+  padding: 5px 0;
+  border-bottom: 1px dashed #ff69b4; /* Borde punteado rosa */
+}
+
+/* Botón de finalizar compra */
+.carrito .finalizar-compra {
+  background-color: deeppink; /* Rosa oscuro */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 12px; /* Bordes muy redondeados */
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 15px;
+  width: 100%; /* Ancho completo */
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Efecto hover para botón finalizar */
+.carrito .finalizar-compra:hover {
+  background-color: hotpink; /* Rosa claro */
+}
+
+/* ========== ACCESOS RÁPIDOS ========== */
+/* Contenedor de cajas de acceso rápido */
+#accesos-rapidos {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espacio entre cajas */
+  flex-wrap: wrap; /* Responsive */
+  padding: 40px 20px;
+}
+
+/* Cajas individuales de acceso */
+.caja-link {
+  position: relative; /* Para posicionar texto */
+  width: 300px;
+  height: 200px;
+  border-radius: 15px; /* Bordes redondeados */
+  overflow: hidden; /* Oculta exceso de imagen */
+  box-shadow: 0 0 10px #ffc0cb; /* Sombra rosa */
+  cursor: pointer; /* Mano al pasar */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Efecto hover para cajas */
+.caja-link:hover {
+  transform: scale(1.05); /* Ligero agrandamiento */
+  box-shadow: 0 0 20px #ff69b4; /* Sombra más intensa */
+}
+
+/* Imágenes dentro de cajas */
+.caja-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajuste de imagen */
+  object-position: center;
+  filter: brightness(0.7); /* Oscurece imagen */
+  transition: filter 0.3s ease; /* Transición suave */
+}
+
+/* Efecto hover para imágenes */
+.caja-link:hover img {
+  filter: brightness(0.5); /* Oscurece más al pasar */
+}
+
+/* Texto superpuesto en cajas */
+.texto-caja {
+  position: absolute; /* Sobre la imagen */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centrado perfecto */
+  font-family: "Brush Script MT", cursive;
+  font-size: 2.5rem; /* Tamaño grande */
+  color: white; /* Texto blanco */
+  text-shadow: 2px 2px 5px hotpink; /* Sombra rosa */
+  text-align: center;
+}
+
+/* Ajustes específicos para cada caja */
+.caja-link.productos img {
+  object-position: center center; /* Centra imagen */
+}
+
+.caja-link.regalos img {
+  object-position: center 40%; /* Ajuste vertical */
+}
+
+.caja-link.contacto img {
+  object-position: center 80%; /* Ajuste vertical */
+}
+
+/* Ajustes de posición para texto en cajas específicas */
+.caja-link.regalos .texto-caja {
+  top: 40%; /* Posición vertical */
+}
+
+.caja-link.contacto .texto-caja {
+  top: 40%; /* Posición vertical */
+}
